@@ -1,8 +1,11 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/programmer-richa/golang_basics/arrays"
 	"github.com/programmer-richa/golang_basics/controlflowstatements"
+	"github.com/programmer-richa/golang_basics/functions"
 	"github.com/programmer-richa/golang_basics/helloworld"
 	"github.com/programmer-richa/golang_basics/pointers"
 	"github.com/programmer-richa/golang_basics/variables"
@@ -83,8 +86,45 @@ func main() {
 	pointers.PointerDeclarationAndInitialization()
 	printSeperator("Pointer Declaration And Initialization With Variable Reference")
 	pointers.PointerDeclarationAndInitializationWithVariableReference()
+
+	functionsModuleWorking()
 }
 
 func printSeperator(heading string) {
 	println("\n\n", heading, "\n__________________________________________________________________________\n")
+}
+
+func functionsModuleWorking() {
+	a := 10
+	b := 20
+	printSeperator("Max of 2 numbers")
+	fmt.Printf("Max of %d and %d is %d\n", a, b, functions.Max(a, b))
+
+	printSeperator("Swap 2 numbers by value")
+	fmt.Println("In main before swapping x = ", a)
+	fmt.Println("In main before swapping y = ", b)
+	functions.SwapByValue(a, b)
+	fmt.Println("In main after swapping x = ", a)
+	fmt.Println("In main after swapping y = ", b)
+
+	printSeperator("Swap 2 numbers by reference")
+	fmt.Println("In main before swapping x = ", a)
+	fmt.Println("In main before swapping y = ", b)
+	functions.SwapByReference(&a, &b)
+	fmt.Println("In main after swapping x = ", a)
+	fmt.Println("In main after swapping y = ", b)
+
+	printSeperator("Implode Function")
+	line := functions.Implode(",", "I", "love", "go", "language", ".")
+	fmt.Println("Line generated : ", line)
+
+	printSeperator("Explode Function")
+	tokens := functions.Explode(",", line)
+	fmt.Println("Tokens generated : ", tokens)
+	fmt.Println("Tokens length : ", len(tokens))
+
+	printSeperator("Sum of 1D array Elements")
+	arr := []int{10, 20, 30, 40, 50}
+	total := functions.SumOf1DArray(arr)
+	fmt.Println("Total of arr : ", arr, " is ", total)
 }
