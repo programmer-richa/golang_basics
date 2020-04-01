@@ -4,6 +4,7 @@ import (
 	"github.com/programmer-richa/golang_basics/arrays"
 	"github.com/programmer-richa/golang_basics/controlflowstatements"
 	"github.com/programmer-richa/golang_basics/helloworld"
+	"github.com/programmer-richa/golang_basics/pointers"
 	"github.com/programmer-richa/golang_basics/variables"
 )
 
@@ -75,6 +76,13 @@ func main() {
 	arrays.CopyArrayByValue()
 	printSeperator("Copy Array By Reference")
 	arrays.CopyArrayByReference()
+
+	printSeperator("Default Value Of Pointer")
+	pointers.DefaultValueOfPointer()
+	printSeperator("Pointer Declaration And Initialization")
+	pointers.PointerDeclarationAndInitialization()
+	printSeperator("Pointer Declaration And Initialization With Variable Reference")
+	pointers.PointerDeclarationAndInitializationWithVariableReference()
 }
 
 func printSeperator(heading string) {
