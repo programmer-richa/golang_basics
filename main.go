@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/programmer-richa/golang_basics/arrays"
 	"github.com/programmer-richa/golang_basics/controlflowstatements"
 	"github.com/programmer-richa/golang_basics/helloworld"
 	"github.com/programmer-richa/golang_basics/variables"
@@ -9,6 +10,7 @@ import (
 func main() {
 	printSeperator("Hello World Example")
 	helloworld.Greeting()
+
 	printSeperator("Variable Declaration Ways")
 	variables.VariableDeclarationWays()
 	printSeperator("Variable Type Tracking")
@@ -24,6 +26,7 @@ func main() {
 	printSeperator("Using Blank Identifier to Overcome The Compultion to Use Variable In Code")
 	variables.UsingBlankIdentifierToOvercomeTheCompultionToUseVariableInCode()
 	printSeperator("If ElseIf Else Example")
+
 	controlflowstatements.IfElseIfElseExample()
 	printSeperator("Switch With OptionalStatement Example")
 	controlflowstatements.SwitchWithOptionalStatementExample()
@@ -55,6 +58,23 @@ func main() {
 	controlflowstatements.ForLoopOnMapExample()
 	printSeperator("For Loop on Channel Example")
 	controlflowstatements.ForLoopOnChannelExample()
+
+	printSeperator("One Dimentional Array Example With Zero Values")
+	arrays.OneDimentionalArrayExampleWithZeroValues()
+	printSeperator("One Dimentional Array Example")
+	arrays.OneDimentionalArrayExample()
+	printSeperator("Declaring And Initializing one Dimentional Array In One Line Example")
+	arrays.DeclaringAndInitializingoneDimentionalArrayInOneLineExample()
+	printSeperator("Declaring And Initializing MultiDimentional Array In One Line Example")
+	arrays.DeclaringAndInitializingMultiDimentionalArrayInOneLineExample()
+	printSeperator("One Dimentional Array With Size Determined By Values")
+	arrays.OneDimentionalArrayWithSizeDeterminedByValues()
+	printSeperator("Comparing Arrays")
+	arrays.ComparingArrays()
+	printSeperator("Copy Array By Value")
+	arrays.CopyArrayByValue()
+	printSeperator("Copy Array By Reference")
+	arrays.CopyArrayByReference()
 }
 
 func printSeperator(heading string) {
