@@ -5,9 +5,11 @@ import (
 
 	"github.com/programmer-richa/golang_basics/arrays"
 	"github.com/programmer-richa/golang_basics/controlflowstatements"
+	"github.com/programmer-richa/golang_basics/exercise"
 	"github.com/programmer-richa/golang_basics/functions"
 	"github.com/programmer-richa/golang_basics/helloworld"
 	"github.com/programmer-richa/golang_basics/pointers"
+	"github.com/programmer-richa/golang_basics/takinguserinput"
 	"github.com/programmer-richa/golang_basics/variables"
 )
 
@@ -86,8 +88,11 @@ func main() {
 	pointers.PointerDeclarationAndInitialization()
 	printSeperator("Pointer Declaration And Initialization With Variable Reference")
 	pointers.PointerDeclarationAndInitializationWithVariableReference()
+	printSeperator("Adding numbers via user input")
+	takinguserinput.AddingTwoNumbers()
 
 	functionsModuleWorking()
+	exercises()
 }
 
 func printSeperator(heading string) {
@@ -127,4 +132,18 @@ func functionsModuleWorking() {
 	arr := []int{10, 20, 30, 40, 50}
 	total := functions.SumOf1DArray(arr)
 	fmt.Println("Total of arr : ", arr, " is ", total)
+}
+
+func exercises() {
+	printSeperator("Swapping Two Numbers")
+	exercise.SwapTwoNumbersWithoutUsingThirtVariable()
+	printSeperator("Add Elements of 2D Array")
+	a := [][]int{
+		{1, 2, 3},
+		{4, 5},
+	}
+	sum := exercise.AddElementsOf2DArray(&a)
+	fmt.Println("Sum = ", sum)
+	printSeperator("Demonstrates working of slice according to number of students,subjects specified by user ")
+	exercise.GetStudentMarksDetails()
 }
