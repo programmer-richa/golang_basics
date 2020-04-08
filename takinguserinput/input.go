@@ -1,14 +1,22 @@
 package takinguserinput
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/programmer-richa/golang_basics/utility"
+)
+
+// Module Level Flag -- used for indentation Purpose
+const level = 1
 
 // AddingTwoNumbers Add 2 numbers entered by user
 func AddingTwoNumbers() {
+	utility.Printh(level, "Adding numbers via user input")
 	var a, b int
-	fmt.Print("Enter First number: ")
-	fmt.Scanln(&a)
-	fmt.Print("Enter second number: ")
-	fmt.Scanln(&b)
+	utility.Print(level, "Enter First number: ")
+	fmt.Scan(&a)
+	utility.Print(level, "Enter second number: ")
+	fmt.Scan(&b)
 	sum := a + b
-	fmt.Println("Sum of", a, "and", b, ":", sum)
+	utility.Println(level, "Sum of", a, "and", b, ":", sum)
 }
