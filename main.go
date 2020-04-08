@@ -1,149 +1,129 @@
+/*
+Every program must start with the package declaration. In Go language, packages are used to organize and reuse the code.
+ In Go, there are two types of program availbl one is executable and another one is the library.
+  The executable programs are those programs that we can run directly from the terminal and Libraries are the package of programs
+  that we can reuse them in our program. Here, the package main tells the compiler that the package must compile
+  in the executable program rather than a shared library. It is the starting point of the program and also contains
+   the main function in it.
+*/
 package main
 
 import (
 	"fmt"
 
 	"github.com/programmer-richa/golang_basics/arrays"
+	"github.com/programmer-richa/golang_basics/constants"
 	"github.com/programmer-richa/golang_basics/controlflowstatements"
 	"github.com/programmer-richa/golang_basics/exercise"
 	"github.com/programmer-richa/golang_basics/functions"
 	"github.com/programmer-richa/golang_basics/helloworld"
+	"github.com/programmer-richa/golang_basics/identifiers"
+	"github.com/programmer-richa/golang_basics/keywords"
+	"github.com/programmer-richa/golang_basics/operators"
 	"github.com/programmer-richa/golang_basics/pointers"
+	"github.com/programmer-richa/golang_basics/runtimeexample"
+	"github.com/programmer-richa/golang_basics/strings"
 	"github.com/programmer-richa/golang_basics/takinguserinput"
+	"github.com/programmer-richa/golang_basics/utility"
 	"github.com/programmer-richa/golang_basics/variables"
 )
 
+// Package Level Constants For Module Choice
+const (
+	// value of iota is incremented for all constants declared
+	_                  = iota // iota value starts from 0 in every separate const block
+	helloConst                // or helloConst= iota // Automatically helloConst will be assigned current value of iota i.e. 1
+	variableConst      = iota //iota 2
+	identifierConst    = iota
+	keywordsConst      = iota
+	constantsFlowConst = iota
+	controlFlowConst   = iota
+	operatorsConst     = iota
+	arrayConst         = iota
+	pointerConst       = iota
+	userInpuConst      = iota
+	functionConst      = iota
+	runtimeConst       = iota
+	stringConst        = iota
+	exerciseConst      = iota
+	exitConst
+	helloConstlbl       = "Hello World"
+	variableConstlbl    = "Variable"
+	identifierConstlbl  = "Identifier"
+	keywordsConstlbl    = "Keywords"
+	constantConstlbl    = "Constants"
+	controlFlowConstlbl = "Control Flow"
+	operatorsConstlbl   = "Operators"
+	arrayConstlbl       = "Array"
+	pointerConstlbl     = "Pointer"
+	userInpuConstlbl    = "Taking User Input"
+	functionConstlbl    = "Functions"
+	runtimeConstlbl     = "Using runtime package"
+	stringConstlbl      = "String"
+	exerciseConstlbl    = "Exercises"
+	exitConstLbl        = "Exit"
+)
+
+// Module Level Flag
+const level = 0
+
 func main() {
-	printSeperator("Hello World Example")
-	helloworld.Greeting()
-
-	printSeperator("Variable Declaration Ways")
-	variables.VariableDeclarationWays()
-	printSeperator("Variable Type Tracking")
-	variables.VariableTypeTracking()
-	printSeperator("Zero Values Of Basic Data Types")
-	variables.ZeroValuesOfBasicDataTypes()
-	printSeperator("Declaring Multiple Variables With Same Data Type In a Single Line")
-	variables.DeclaringMultipleVariablesWithSameDataTypeInSingleLine()
-	printSeperator("Declaring Multiple Variables With Different Data Type In a Single Line")
-	variables.DeclaringMultipleVariablesWithDifferentDataTypeInSingleLine()
-	printSeperator("Initializing Variables From a Function Returning Multiple Values")
-	variables.InitializingVariablesFromAFunctionReturningMultipleValues()
-	printSeperator("Using Blank Identifier to Overcome The Compultion to Use Variable In Code")
-	variables.UsingBlankIdentifierToOvercomeTheCompultionToUseVariableInCode()
-	printSeperator("If ElseIf Else Example")
-
-	controlflowstatements.IfElseIfElseExample()
-	printSeperator("Switch With OptionalStatement Example")
-	controlflowstatements.SwitchWithOptionalStatementExample()
-	printSeperator("Switch Without Optional Statement Example")
-	controlflowstatements.SwitchWithoutOptionalStatementExample()
-	printSeperator("Switch Expression Example")
-	controlflowstatements.SwitchExpressionExample()
-	printSeperator("Switch Type Variable Example")
-	controlflowstatements.SwitchTypeVariableExample()
-	printSeperator("For Loop Example")
-	controlflowstatements.ForLoopExample()
-	printSeperator("For Loop With Break Example")
-	controlflowstatements.ForLoopWithBreakExample()
-	printSeperator("For Loop With Continue Example")
-	controlflowstatements.ForLoopWithContinueExample()
-	printSeperator("For Loop With Labled Continue Example")
-	controlflowstatements.ForLoopWithLabledContinueExample()
-	printSeperator("For Loop With GoTo Example")
-	controlflowstatements.ForLoopWithGoToExample()
-	printSeperator("For Infinite Loop Example")
-	controlflowstatements.ForInfiniteLoopExample()
-	printSeperator("For Loop Like While Example")
-	controlflowstatements.ForLoopLikeWhileExample()
-	printSeperator("For Loop On Range Example")
-	controlflowstatements.ForLoopOnRangeExample()
-	printSeperator("For Loop On String Example")
-	controlflowstatements.ForLoopOnStringExample()
-	printSeperator("For Loop On Map Example")
-	controlflowstatements.ForLoopOnMapExample()
-	printSeperator("For Loop on Channel Example")
-	controlflowstatements.ForLoopOnChannelExample()
-
-	printSeperator("One Dimentional Array Example With Zero Values")
-	arrays.OneDimentionalArrayExampleWithZeroValues()
-	printSeperator("One Dimentional Array Example")
-	arrays.OneDimentionalArrayExample()
-	printSeperator("Declaring And Initializing one Dimentional Array In One Line Example")
-	arrays.DeclaringAndInitializingoneDimentionalArrayInOneLineExample()
-	printSeperator("Declaring And Initializing MultiDimentional Array In One Line Example")
-	arrays.DeclaringAndInitializingMultiDimentionalArrayInOneLineExample()
-	printSeperator("One Dimentional Array With Size Determined By Values")
-	arrays.OneDimentionalArrayWithSizeDeterminedByValues()
-	printSeperator("Comparing Arrays")
-	arrays.ComparingArrays()
-	printSeperator("Copy Array By Value")
-	arrays.CopyArrayByValue()
-	printSeperator("Copy Array By Reference")
-	arrays.CopyArrayByReference()
-
-	printSeperator("Default Value Of Pointer")
-	pointers.DefaultValueOfPointer()
-	printSeperator("Pointer Declaration And Initialization")
-	pointers.PointerDeclarationAndInitialization()
-	printSeperator("Pointer Declaration And Initialization With Variable Reference")
-	pointers.PointerDeclarationAndInitializationWithVariableReference()
-	printSeperator("Adding numbers via user input")
-	takinguserinput.AddingTwoNumbers()
-
-	functionsModuleWorking()
-	exercises()
-}
-
-func printSeperator(heading string) {
-	println("\n\n", heading, "\n__________________________________________________________________________\n")
-}
-
-func functionsModuleWorking() {
-	a := 10
-	b := 20
-	printSeperator("Max of 2 numbers")
-	fmt.Printf("Max of %d and %d is %d\n", a, b, functions.Max(a, b))
-
-	printSeperator("Swap 2 numbers by value")
-	fmt.Println("In main before swapping x = ", a)
-	fmt.Println("In main before swapping y = ", b)
-	functions.SwapByValue(a, b)
-	fmt.Println("In main after swapping x = ", a)
-	fmt.Println("In main after swapping y = ", b)
-
-	printSeperator("Swap 2 numbers by reference")
-	fmt.Println("In main before swapping x = ", a)
-	fmt.Println("In main before swapping y = ", b)
-	functions.SwapByReference(&a, &b)
-	fmt.Println("In main after swapping x = ", a)
-	fmt.Println("In main after swapping y = ", b)
-
-	printSeperator("Implode Function")
-	line := functions.Implode(",", "I", "love", "go", "language", ".")
-	fmt.Println("Line generated : ", line)
-
-	printSeperator("Explode Function")
-	tokens := functions.Explode(",", line)
-	fmt.Println("Tokens generated : ", tokens)
-	fmt.Println("Tokens length : ", len(tokens))
-
-	printSeperator("Sum of 1D array Elements")
-	arr := []int{10, 20, 30, 40, 50}
-	total := functions.SumOf1DArray(arr)
-	fmt.Println("Total of arr : ", arr, " is ", total)
-}
-
-func exercises() {
-	printSeperator("Swapping Two Numbers")
-	exercise.SwapTwoNumbersWithoutUsingThirtVariable()
-	printSeperator("Add Elements of 2D Array")
-	a := [][]int{
-		{1, 2, 3},
-		{4, 5},
+	var choice int // local variable
+	for choice != exitConst {
+		//Module Level Option Display
+		utility.Println(level, "Choose From Options below :")
+		utility.Println(level, helloConst, helloConstlbl)
+		utility.Println(level, variableConst, variableConstlbl)
+		utility.Println(level, identifierConst, identifierConstlbl)
+		utility.Println(level, keywordsConst, keywordsConstlbl)
+		utility.Println(level, constantsFlowConst, constantConstlbl)
+		utility.Println(level, controlFlowConst, controlFlowConstlbl)
+		utility.Println(level, operatorsConst, operatorsConstlbl)
+		utility.Println(level, arrayConst, arrayConstlbl)
+		utility.Println(level, pointerConst, pointerConstlbl)
+		utility.Println(level, userInpuConst, userInpuConstlbl)
+		utility.Println(level, functionConst, functionConstlbl)
+		utility.Println(level, runtimeConst, runtimeConstlbl)
+		utility.Println(level, stringConst, stringConstlbl)
+		utility.Println(level, exerciseConst, exerciseConstlbl)
+		utility.Println(level, exitConst, exitConstLbl)
+		utility.Print(level, "Enter Your choice :")
+		//Get user module choice
+		fmt.Scan(&choice)
+		// Execute The Program according to user choice
+		switch choice {
+		case helloConst:
+			helloworld.Greeting()
+		case variableConst:
+			variables.Block()
+		case identifierConst:
+			identifiers.Usage()
+		case keywordsConst:
+			keywords.Usage()
+		case constantsFlowConst:
+			constants.Usage()
+		case controlFlowConst:
+			controlflowstatements.Block()
+		case operatorsConst:
+			operators.Block()
+		case arrayConst:
+			arrays.Block()
+		case pointerConst:
+			pointers.Block()
+		case userInpuConst:
+			takinguserinput.AddingTwoNumbers()
+		case functionConst:
+			functions.Block()
+		case runtimeConst:
+			runtimeexample.GettingRuntimeEnvData()
+		case stringConst:
+			strings.ToByteArray()
+		case exerciseConst:
+			exercise.Block()
+		case exitConst:
+			utility.Println(level, "Exiting Program....")
+		default:
+			utility.Println(level, "Invalid choice")
+		}
 	}
-	sum := exercise.AddElementsOf2DArray(&a)
-	fmt.Println("Sum = ", sum)
-	printSeperator("Demonstrates working of slice according to number of students,subjects specified by user ")
-	exercise.GetStudentMarksDetails()
 }
