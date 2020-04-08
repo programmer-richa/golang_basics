@@ -1,7 +1,7 @@
 package exercise
 
-//AddElementsOf2DArray : Returns sum of 2d array
-func AddElementsOf2DArray(arr *[][]int) int {
+//add2d : Returns sum of 2d array
+func add2d(arr *[][]int) int {
 	var sum int = 0
 	rows := len(*(arr))
 	for i := 0; i < rows; i++ {

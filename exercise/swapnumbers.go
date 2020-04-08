@@ -1,12 +1,12 @@
 package exercise
 
-import "fmt"
+import "github.com/programmer-richa/golang_basics/utility"
 
-//SwapTwoNumbersWithoutUsingThirtVariable : Swapping simply by x,y=y,X Operation
-func SwapTwoNumbersWithoutUsingThirtVariable() {
+//swap : Swapping simply by x,y=y,X Operation
+func swap() {
 	x, y := 10, 20
-	fmt.Println("X:", x, "y:", y)
+	utility.Println(sublevel, "X: ", x, " y: ", y)
 	x, y = y, x
-	fmt.Println("After swapping")
-	fmt.Println("X:", x, "y:", y)
+	utility.Println(sublevel, "After swapping")
+	utility.Println(sublevel, "X: ", x, " y: ", y)
 }
