@@ -31,7 +31,7 @@ const (
 	exitConstLbl          = "Exit"
 )
 
-//Block Works according to choice of user
+//Block This function enables user to choose from the list of options available to test variety of functions implemented in this sub module
 func Block() {
 	var a, b, choice = 10, 20, 0 // local variable
 	tabs := utility.Tabs(sublevel)
@@ -93,17 +93,17 @@ func Block() {
 
 }
 
-//Explode : Variadic Functions that splits a string with given separator and returns string array
+//Explode  Variadic Functions that splits a string with given separator and returns string array
 func Explode(separator string, str string) []string {
 	return strings.Split(str, separator)
 }
 
-//Implode : Variadic Functions that joins a string with given separator and returns string array
+//Implode  Variadic Functions that joins a string with given separator and returns string array
 func Implode(separator string, str ...string) string {
 	return strings.Join(str, separator)
 }
 
-//SwapByValue : Pass By value , separate copy of arguments is created in the memory,so the changes made in the formal arguments are not reflected in the actual arguments
+//SwapByValue  Pass By value , separate copy of arguments is created in the memory,so the changes made in the formal arguments are not reflected in the actual arguments
 func SwapByValue(x int, y int) {
 	temp := x
 	x = y
@@ -112,7 +112,7 @@ func SwapByValue(x int, y int) {
 	utility.Println(sublevel, "In swapByValue y = ", y)
 }
 
-//SwapByReference : Pass By Reference , address of arguments passed to the function, so the changes made in the formal arguments are reflected in the actual arguments
+//SwapByReference  Pass By Reference , address of arguments passed to the function, so the changes made in the formal arguments are reflected in the actual arguments
 func SwapByReference(x *int, y *int) {
 	temp := *x
 	*x = *y
@@ -121,7 +121,7 @@ func SwapByReference(x *int, y *int) {
 	utility.Println(sublevel, "In swapByValue y = ", *y)
 }
 
-// Max : returns max of two numbers
+// Max  Finds greater of 2 number and returns it
 func Max(x int, y int) int {
 	z := y
 	if x > y {
@@ -130,7 +130,7 @@ func Max(x int, y int) int {
 	return z
 }
 
-// SumOf1DArray : returns sum of of 1D Array
+// SumOf1DArray This function calculates sum of values in 1D array and returns total
 func SumOf1DArray(a []int) int {
 	sizeOnArray := len(a)
 	total := 0
@@ -141,7 +141,7 @@ func SumOf1DArray(a []int) int {
 	return total
 }
 
-// Sort1DArrayByValue : sorts array
+// Sort1DArrayByValue  Sorts 1D array of data type Int
 func Sort1DArrayByValue(a []int) {
 	sort.Ints(a)
 
