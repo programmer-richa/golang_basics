@@ -26,7 +26,7 @@ import "github.com/programmer-richa/golang_basics/utility"
 // Module Level Flag -- used for indentation Purpose
 const level = 1
 
-// Usage dummy identifier examples
+// Usage Identifier examples
 func Usage() {
 	utility.Printh(level, "Using Identifiers")
 	var name = "Richa"
