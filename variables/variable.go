@@ -104,7 +104,7 @@ func Block() {
 
 }
 
-//Declaration : It demonstrates alternatives to declare and initialize variables
+//Declaration It demonstrates alternatives to declare and initialize variables
 func Declaration() {
 	utility.Printh(sublevel, declarationConstLbl)
 	// declared variables must be used at least once in the program, otherwise compiler generated CTE
@@ -140,7 +140,7 @@ func Declaration() {
 	utility.Println(level, "Imaginary value  : ", imag(complexNumber))
 }
 
-//Type : It demonstrates value and type tracking of a variable
+//Type It demonstrates value and type tracking of a variable
 func Type() {
 	// Variable declared and
 	// initialized without the
@@ -160,7 +160,7 @@ func Type() {
 	fmt.Printf(tabs+"The type of myvariable3 is : %T\n", myvariable3)
 }
 
-//Zero :  Displays default values of basic data types
+//Zero  Displays default values of basic data types
 func Zero() {
 	// Variable declared and
 	// initialized without expression
@@ -210,7 +210,7 @@ func Zero() {
 
 }
 
-//SameType :  Demonstrates how multiple variables having same data type can be declared on a single line
+//SameType  Demonstrates how multiple variables having same data type can be declared on a single line
 func SameType() {
 	// Multiple variables of the same type
 	// are declared and initialized
@@ -225,7 +225,7 @@ func SameType() {
 	fmt.Printf(tabs+"myvariable3 %d\n", myvariable3)
 }
 
-//DifferentType :  Demonstrates how multiple variables having different data type can be declared on a single line
+//DifferentType  Demonstrates how multiple variables having different data type can be declared on a single line
 func DifferentType() {
 	utility.Printh(sublevel, differentTypeConstLbl)
 	tabs := utility.Tabs(sublevel)
@@ -241,7 +241,7 @@ func DifferentType() {
 
 }
 
-//Function :  Initialize variables from the function return type
+//Function  Initialize variables from the function return type
 func Function() {
 	utility.Printh(sublevel, functionConstLbl)
 	tabs := utility.Tabs(sublevel)
@@ -254,7 +254,7 @@ func Function() {
 	utility.Println(sublevel, "Error Code : ", errorsGenerated)
 }
 
-//Blank :  Initialize variables from the function return type and assign to _ if the returned value is not to be used further in the code
+//Blank  Initialize variables from the function return type and assign to _ if the returned value is not to be used further in the code
 func Blank() {
 	// Println returns Multiple return values
 	// First return variables return bytes used
