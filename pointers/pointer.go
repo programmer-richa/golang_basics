@@ -23,7 +23,7 @@ const (
 	exitConstLbl       = "Exit"
 )
 
-//Block Works according to choice of user
+//Block This function enables user to choose from the list of options available to test variety of pointer concepts implemented in this sub module
 func Block() {
 	var choice int
 	//Module Level Option Display
@@ -55,7 +55,7 @@ func Block() {
 
 }
 
-//Zero : default value of pointer type is <nil>
+//Zero Default value of pointer type is <nil>
 func Zero() {
 	utility.Printh(sublevel, zeroConstLbl)
 	// Declaring Pointer
@@ -64,7 +64,7 @@ func Zero() {
 	utility.Println(sublevel, " Default Value of : ", firstName)
 }
 
-//Initialize : declare and initialize pointer variable
+//Initialize Declare and initialize pointer variable
 func Initialize() {
 	utility.Printh(sublevel, initializeConstLbl)
 	// Declaring Pointer
@@ -78,7 +78,7 @@ func Initialize() {
 	utility.Println(sublevel, " Value stored in pointer : ", firstName)
 }
 
-//Reference : declare and initialize pointer variable
+//Reference Declare and initialize pointer variable
 func Reference() {
 	utility.Printh(sublevel, referenceConstLbl)
 	// Declaring Pointer
