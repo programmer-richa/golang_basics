@@ -9,8 +9,8 @@ import (
 // Module Level Flag -- used for indentation Purpose
 const level = 1
 
-// AddingTwoNumbers Add 2 numbers entered by user
-func AddingTwoNumbers() {
+//Add Add 2 numbers entered by user
+func Add() {
 	utility.Printh(level, "Adding numbers via user input")
 	var a, b int
 	utility.Print(level, "Enter First number: ")
