@@ -35,7 +35,7 @@ const level = 1
 // PI value of PI
 const PI = 3.14 //Untyped
 
-//Usage : Accessing Package Level constant PI
+//Usage : This function demonstrates the scope and type of Constants
 func Usage() {
 	utility.Printh(level, "Accessing Package and Global Scope Constants")
 	const AUTHOR string = "Richa" //typed
