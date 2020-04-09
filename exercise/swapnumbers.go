@@ -2,7 +2,7 @@ package exercise
 
 import "github.com/programmer-richa/golang_basics/utility"
 
-//swap : Swapping simply by x,y=y,X Operation
+//swap  Swap 2 numbers simply by x,y=y,X Operation
 func swap() {
 	x, y := 10, 20
 	utility.Println(sublevel, "X: ", x, " y: ", y)

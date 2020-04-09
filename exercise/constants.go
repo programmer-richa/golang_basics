@@ -23,7 +23,7 @@ const (
 	exitConstLbl     = "Exit"
 )
 
-//Block Works according to choice of user
+//Block This function enables user to choose from the list of options available to test variety of exercises implemented in this sub module
 func Block() {
 	var choice int
 	//Module Level Option Display
