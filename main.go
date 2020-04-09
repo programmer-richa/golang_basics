@@ -67,6 +67,7 @@ const (
 // Module Level Flag
 const level = 0
 
+//main This is the entry point of the Program.
 func main() {
 	var choice int // local variable
 	for choice != exitConst {
@@ -111,11 +112,11 @@ func main() {
 		case pointerConst:
 			pointers.Block()
 		case userInpuConst:
-			takinguserinput.AddingTwoNumbers()
+			takinguserinput.Add()
 		case functionConst:
 			functions.Block()
 		case runtimeConst:
-			runtimeexample.GettingRuntimeEnvData()
+			runtimeexample.Data()
 		case stringConst:
 			strings.ToByteArray()
 		case exerciseConst:
