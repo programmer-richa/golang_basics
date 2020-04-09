@@ -6,7 +6,7 @@ import "github.com/programmer-richa/golang_basics/utility"
 const level = 1
 const sublevel = level + 1
 
-// ToByteArray string to byte array conversion
+// ToByteArray String to byte array conversion
 func ToByteArray() {
 	utility.Printh(sublevel, "String to []byte conversion")
 	str := "Hello, world"
