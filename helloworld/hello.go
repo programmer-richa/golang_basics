@@ -15,8 +15,7 @@ import (
 // Module Level Flag
 const level = 1
 
-//Greeting exported Functions must have comments as specified above
-//Greeting prints Hello String
+//Greeting This function prints Hello World String on console.
 func Greeting() {
 	utility.Println(level, "Hello world example")
 	fmt.Println("Hello World")
