@@ -21,6 +21,8 @@ const (
 	compareConst
 	copyValueConst
 	copyReferenceConst
+	loop1DConst
+	loop2DConst
 	exitConst
 	zeroConstLbl             = "One Dimentional Array Example With Zero Values"
 	oneDimentionalConstLbl   = "One Dimentional Array Example"
@@ -30,10 +32,12 @@ const (
 	compareConstLbl          = "Comparing Arrays"
 	copyValueConstLbl        = "Copy Array By Value"
 	copyReferenceConstLbl    = "Copy Array By Reference"
+	loop1DConstLbl           = "For Each Loop 1D Array"
+	loop2DConstLbl           = "For Each Loop 2D Array"
 	exitConstLbl             = "Exit"
 )
 
-//Block Works according to choice of user
+//Block This function enables user to choose from the list of options available to test variety of array examples implemented in this sub module
 func Block() {
 	var choice int
 	//Module Level Option Display
@@ -47,6 +51,8 @@ func Block() {
 		utility.Println(level, compareConst, compareConstLbl)
 		utility.Println(level, copyValueConst, copyValueConstLbl)
 		utility.Println(level, copyReferenceConst, copyReferenceConstLbl)
+		utility.Println(level, loop1DConst, loop1DConstLbl)
+		utility.Println(level, loop2DConst, loop2DConstLbl)
 		utility.Println(level, exitConst, exitConstLbl)
 		utility.Print(level, "Enter Your choice :")
 
@@ -71,8 +77,13 @@ func Block() {
 			CopyValue()
 		case copyReferenceConst:
 			CopyReference()
+		case loop1DConst:
+			Loop1D()
+		case loop2DConst:
+			Loop2D()
 		case exitConst:
 			utility.Println(level, exitConstLbl)
+
 		default:
 			utility.Println(level, "Invalid Choice")
 		}
@@ -80,7 +91,7 @@ func Block() {
 
 }
 
-//Zero : As there is no concept of uninitiatized variables in go, all the array values are assigned zero(default) values according to the data type
+//Zero  As there is no concept of uninitiatized variables in go, all the array values are assigned zero(default) values according to the data type
 func Zero() {
 	utility.Printh(sublevel, zeroConstLbl)
 	const subjectCount int = 5
@@ -92,7 +103,7 @@ func Zero() {
 
 }
 
-//AutoSize: Array length calculation according to the number of values passed
+//AutoSize Array length calculation according to the number of values passed
 func AutoSize() {
 	utility.Printh(sublevel, autoSizeConstLbl)
 	studentMarks := [...]int{10, 20, 30}
@@ -104,7 +115,7 @@ func AutoSize() {
 
 }
 
-//Compare: Comparing if two arrays are equal or not
+//Compare  Comparing if two arrays are equal or not
 func Compare() {
 	utility.Printh(sublevel, compareConstLbl)
 	studentMarks := [...]int{10, 20, 30}
@@ -116,7 +127,7 @@ func Compare() {
 
 }
 
-//CopyValue: Arrays are value type, so copy of array is created and assigned to new array
+//CopyValue Arrays are value type, so copy of array is created and assigned to new array
 func CopyValue() {
 	utility.Printh(sublevel, copyValueConstLbl)
 	studentMarks := [...]int{10, 20, 30}
@@ -129,7 +140,7 @@ func CopyValue() {
 
 }
 
-//CopyReference: Arrays are value type, so address of array assigned to new array so that the changes made in either array are reflected in other
+//CopyReference Arrays are value type, so address of array assigned to new array so that the changes made in either array are reflected in other
 func CopyReference() {
 	utility.Printh(sublevel, copyReferenceConstLbl)
 	studentMarks := [...]int{10, 20, 30}
@@ -142,7 +153,7 @@ func CopyReference() {
 
 }
 
-//OneDimentional : working of 1D Array
+//OneDimentional  Working of 1D Array
 func OneDimentional() {
 	utility.Printh(sublevel, oneDimentionalConstLbl)
 	const subjectCount int = 5
@@ -157,7 +168,7 @@ func OneDimentional() {
 
 }
 
-//Initialize : Declaring Multidimentional Array
+//Initialize  Declaring Multidimentional Array
 func Initialize() {
 	utility.Printh(sublevel, initializeConstLbl)
 	const subjectCount int = 5
@@ -169,7 +180,7 @@ func Initialize() {
 
 }
 
-//Multidimentional : Declaring MultiDimetional Array
+//Multidimentional  Declaring MultiDimetional Array
 func Multidimentional() {
 	utility.Printh(sublevel, multidimentionalConstLbl)
 	const studentCount int = 2
@@ -185,4 +196,30 @@ func Multidimentional() {
 		}
 	}
 
+}
+
+//Loop1D Prints key value pair of values in array using range
+func Loop1D() {
+	utility.Printh(sublevel, loop1DConstLbl)
+	arr := [5]int{1, 2, 3, 4, 5}
+	for index, value := range arr {
+		utility.Println(sublevel, "Index : ", index, "Value:", value)
+	}
+}
+
+//Loop2D Prints key value pair of values in array using range
+func Loop2D() {
+	utility.Printh(sublevel, loop1DConstLbl)
+	arr := [5][2]int{{1, 2},
+		{2, 3},
+		{3, 4},
+		{4, 5},
+		{5, 6},
+	}
+	for row, a := range arr {
+		utility.Println(sublevel, "Row : ", row)
+		for col, value := range a {
+			utility.Println(sublevel, "Col : ", col, "value:", value)
+		}
+	}
 }
