@@ -6,7 +6,7 @@ import (
 	"github.com/programmer-richa/golang_basics/utility"
 )
 
-// dynamicMarks Demonstrates working of slice according to number of students,subjects specified by user
+// dynamicMarks   demonstrates working of slice according to number of students,subjects specified by user.
 func dynamicMarks() {
 	var studentsCount int
 	utility.Println(sublevel, "Enter number Of Students")

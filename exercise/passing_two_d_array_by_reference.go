@@ -1,8 +1,7 @@
 package exercise
 
-//add2d : Returns sum of 2d array
-func add2d(arr *[][]int) int {
-	var sum int = 0
+//add2d  returns sum of 2d array.
+func add2d(arr *[][]int) (sum int) {
 	rows := len(*(arr))
 	for i := 0; i < rows; i++ {
 		cols := len((*(arr))[i])

@@ -1,3 +1,4 @@
+//Package exercise contains miscellaneous examples of topic covered in go lang.
 package exercise
 
 import (
@@ -6,7 +7,7 @@ import (
 	"github.com/programmer-richa/golang_basics/utility"
 )
 
-// Module Level Flag -- used for indentation Purpose
+// Module Level Flag is used for indentation Purpose
 const level = 1
 const sublevel = level + 1
 
@@ -23,7 +24,7 @@ const (
 	exitConstLbl     = "Exit"
 )
 
-//Block This function enables user to choose from the list of options available to test variety of exercises implemented in this sub module
+//Block  enables user to choose from the list of options available to test variety of exercises implemented in this sub module.
 func Block() {
 	var choice int
 	//Module Level Option Display
