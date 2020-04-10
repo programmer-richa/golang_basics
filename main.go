@@ -6,6 +6,7 @@ Every program must start with the package declaration. In Go language, packages 
   in the executable program rather than a shared library. It is the starting point of the program and also contains
    the main function in it.
 */
+// Package main Entry Point of the Program
 package main
 
 import (
