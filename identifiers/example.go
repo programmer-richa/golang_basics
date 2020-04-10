@@ -19,6 +19,7 @@ The first character of the exported identifier’s name should be in the Unicode
 The identifier should be declared in the package block, or it is a variable name, or it is a method name.
 The uniqueness of the identifiers means the identifier is unique from the other set of the identifiers available in your program, or in the package and they are not exported.
 */
+//Package identifiers demonstrats usage of some identifiers
 package identifiers
 
 import "github.com/programmer-richa/golang_basics/utility"
@@ -26,7 +27,7 @@ import "github.com/programmer-richa/golang_basics/utility"
 // Module Level Flag -- used for indentation Purpose
 const level = 1
 
-// Usage Identifier examples
+// Usage demonstrates working of identifier.
 func Usage() {
 	utility.Printh(level, "Using Identifiers")
 	var name = "Richa"
