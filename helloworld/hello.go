@@ -1,3 +1,4 @@
+//Package helloworld demonstrates working of print statement
 package helloworld
 
 /*
@@ -15,7 +16,7 @@ import (
 // Module Level Flag
 const level = 1
 
-//Greeting This function prints Hello World String on console.
+//Greeting prints Hello World String on console.
 func Greeting() {
 	utility.Println(level, "Hello world example")
 	fmt.Println("Hello World")
@@ -30,7 +31,7 @@ main: It is the main function in Go language, which doesn’t contain the parame
 Println(): This method is present in fmt package and it is used to display “!… Hello World …!” string. Here, Println means Print line.
 */
 
-//Hello Return hello world String
+//Hello returns hello world String
 func Hello() string {
 	return quote.Hello()
 
