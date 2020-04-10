@@ -1,12 +1,13 @@
+// Package strings demontrats working of strings
 package strings
 
 import "github.com/programmer-richa/golang_basics/utility"
 
-// Module Level Flag -- used for indentation Purpose
+// Module Level Flag is used for indentation purpose.
 const level = 1
 const sublevel = level + 1
 
-// ToByteArray String to byte array conversion
+// ToByteArray   coverts string to byte array.
 func ToByteArray() {
 	utility.Printh(sublevel, "String to []byte conversion")
 	str := "Hello, world"
