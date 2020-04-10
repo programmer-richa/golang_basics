@@ -1,3 +1,4 @@
+// Package pointers demonstrating working of pointer.
 package pointers
 
 import (
@@ -6,7 +7,7 @@ import (
 	"github.com/programmer-richa/golang_basics/utility"
 )
 
-// Module Level Flag -- used for indentation Purpose
+// Module Level Flag is used for indentation Purpose.
 const level = 1
 const sublevel = level + 1
 
@@ -23,7 +24,7 @@ const (
 	exitConstLbl       = "Exit"
 )
 
-//Block This function enables user to choose from the list of options available to test variety of pointer concepts implemented in this sub module
+//Block enables user to choose from the list of options available to test variety of pointer concepts implemented in this sub module.
 func Block() {
 	var choice int
 	//Module Level Option Display
@@ -55,7 +56,7 @@ func Block() {
 
 }
 
-//Zero Default value of pointer type is <nil>
+//Zero demonstrates default value of pointer type is <nil>.
 func Zero() {
 	utility.Printh(sublevel, zeroConstLbl)
 	// Declaring Pointer
@@ -64,7 +65,7 @@ func Zero() {
 	utility.Println(sublevel, " Default Value of : ", firstName)
 }
 
-//Initialize Declare and initialize pointer variable
+//Initialize demonstrates declaration and initialization of pointer variable.
 func Initialize() {
 	utility.Printh(sublevel, initializeConstLbl)
 	// Declaring Pointer
@@ -78,7 +79,7 @@ func Initialize() {
 	utility.Println(sublevel, " Value stored in pointer : ", firstName)
 }
 
-//Reference Declare and initialize pointer variable
+//Reference demonstrates declaration and initialization of pointer variable from variable reference.
 func Reference() {
 	utility.Printh(sublevel, referenceConstLbl)
 	// Declaring Pointer
