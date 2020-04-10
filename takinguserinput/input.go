@@ -1,3 +1,4 @@
+// Package takinguserinput   demonstrates way to take input from user.
 package takinguserinput
 
 import (
@@ -6,10 +7,10 @@ import (
 	"github.com/programmer-richa/golang_basics/utility"
 )
 
-// Module Level Flag -- used for indentation Purpose
+// Module Level Flag is used for indentation purpose.
 const level = 1
 
-//Add Add 2 numbers entered by user
+//Add demonstrates addition of 2 numbers entered by user.
 func Add() {
 	utility.Printh(level, "Adding numbers via user input")
 	var a, b int
