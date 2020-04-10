@@ -13,13 +13,16 @@ Numeric Constant (Integer constant, Floating constant, Complex constant)
 String literals
 Boolean Constant
 */
+// Package constants   demonstrates working of global and local scoped constants, typed and untyped constants, and working of iota.
 package constants
 
 import "github.com/programmer-richa/golang_basics/utility"
 
 const (
 	_   = iota // iota value starts from 0 in every separate const block
-	red        // or red= iota // Automatically red will be assigned current value of iota i.e. 1 because go compiler assigns same value to the next unassigned constanst as it is assigned to prev constant
+	red        // or red= iota
+	// Automatically red will be assigned current value of iota i.e. 1
+	// because go compiler assigns same value to the next unassigned constanst as it is assigned to prev constant
 	blue
 )
 
@@ -29,13 +32,13 @@ const (
 	other = iota // iota is incremented for every constant declared in a block, so value of other will be 2
 )
 
-// Module Level Flag -- used for indentation Purpose
+// Module Level Flag is used for indentation Purpose
 const level = 1
 
 // PI value of PI
 const PI = 3.14 //Untyped
 
-//Usage : This function demonstrates the scope and type of Constants
+//Usage   demonstrates the scope and type of Constants
 func Usage() {
 	utility.Printh(level, "Accessing Package and Global Scope Constants")
 	const AUTHOR string = "Richa" //typed
