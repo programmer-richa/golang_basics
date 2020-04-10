@@ -21,7 +21,7 @@ const (
 	modulusAssignmentConstLbl        = "Modulous Assignment"
 )
 
-//AssignmentOperator This function enables user to choose from the list of options available to test variety of assignment operators implemented in this sub module
+//AssignmentOperator enables user to choose from the list of options available to test variety of assignment operators implemented in this sub module.
 func AssignmentOperator() {
 	var choice int
 	utility.Println(sublevel, "Choose option:")
@@ -47,7 +47,8 @@ func AssignmentOperator() {
 	}
 }
 
-//addAssignmentNumbers This package scoped function accepts 2 integeral values from user and assigns the sum of entered values to the first variable
+//addAssignmentNumbers accepts 2 integeral values from user
+// and assigns the sum of entered values to the first variable.
 func addAssignmentNumbers() {
 	var a, b, c int
 	tabs := utility.Tabs(sublevel1)
@@ -60,7 +61,8 @@ func addAssignmentNumbers() {
 	fmt.Printf(tabs+"Before Addition a = %d\t After Addition a= %d\n", c, a)
 }
 
-//subtractAssignmentNumbers This package scoped function accepts 2 integeral values from user and assigns the difference of entered values to the first variable
+//subtractAssignmentNumbers accepts 2 integeral values from user
+// and assigns the difference of entered values to the first variable.
 func subtractAssignmentNumbers() {
 	tabs := utility.Tabs(sublevel1)
 	var a, b, c int
@@ -73,7 +75,8 @@ func subtractAssignmentNumbers() {
 	fmt.Printf(tabs+"Before Subtraction a = %d\t After Subtraction a= %d\n", c, a)
 }
 
-//multiplyAssignmentNumbers This package scoped function accepts 2 integeral values from user and assigns the product of entered values to the first variable
+//multiplyAssignmentNumbers accepts 2 integeral values from user
+// and assigns the product of entered values to the first variable.
 func multiplyAssignmentNumbers() {
 	tabs := utility.Tabs(sublevel1)
 	var a, b, c int
@@ -86,7 +89,8 @@ func multiplyAssignmentNumbers() {
 	fmt.Printf(tabs+"Before Multiplication a = %d\t After Multiplication a= %d\n", c, a)
 }
 
-//divideAssignmentNumbers This package scoped function accepts 2 integeral values from user and assigns the quotent of entered values to the first variable
+//divideAssignmentNumbers accepts 2 integeral values from user
+// and assigns the quotent of entered values to the first variable.
 func divideAssignmentNumbers() {
 	tabs := utility.Tabs(sublevel1)
 	var a, b, c int
@@ -99,7 +103,8 @@ func divideAssignmentNumbers() {
 	fmt.Printf(tabs+"Before Division a = %d\t After Division a= %d\n", c, a)
 }
 
-//remainderAssignmentNumbers This package scoped function accepts 2 integeral values from user and assigns the remainder of entered values to the first variable
+//remainderAssignmentNumbers accepts 2 integeral values from user
+// and assigns the remainder of entered values to the first variable.
 func remainderAssignmentNumbers() {
 	tabs := utility.Tabs(sublevel1)
 	var a, b, c int

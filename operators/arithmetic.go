@@ -22,7 +22,7 @@ const (
 	reverseConstLbl        = " Reverse Of a number"
 )
 
-//ArithmeticOperator This function enables user to choose from the list of options available to test variety of arithematic operators implemented in this sub module
+//ArithmeticOperator enables user to choose from the list of options available to test variety of arithematic operators implemented in this sub module
 func ArithmeticOperator() {
 	var choice int
 	utility.Println(sublevel, "Choose From Options:")
@@ -51,7 +51,7 @@ func ArithmeticOperator() {
 
 }
 
-//addTwoNumbers This package scoped function accepts 2 integeral values from user and prints there sum
+//addTwoNumbers accepts 2 integeral values from user and prints there sum.
 func addTwoNumbers() {
 	var a, b, c int
 	tabs := utility.Tabs(sublevel1)
@@ -63,7 +63,7 @@ func addTwoNumbers() {
 	fmt.Printf(tabs+"Sum of %d and %d is %d", a, b, c)
 }
 
-//subtractTwoNumbers This package scoped function accepts 2 integeral values from user and prints there difference
+//subtractTwoNumbers accepts 2 integeral values from user and prints there difference.
 func subtractTwoNumbers() {
 	var a, b, c int
 	tabs := utility.Tabs(sublevel1)
@@ -75,7 +75,7 @@ func subtractTwoNumbers() {
 	fmt.Printf(tabs+"Difference of %d and %d is %d", a, b, c)
 }
 
-//multiplyTwoNumbers This package scoped function accepts 2 integeral values from user and prints there product
+//multiplyTwoNumbers accepts 2 integeral values from user and prints there product.
 func multiplyTwoNumbers() {
 	var a, b, c int
 	tabs := utility.Tabs(sublevel1)
@@ -87,7 +87,7 @@ func multiplyTwoNumbers() {
 	fmt.Printf(tabs+"Product of %d and %d is %d", a, b, c)
 }
 
-//divideTwoNumbers This package scoped function accepts 2 integeral values from user and prints there quotient
+//divideTwoNumbers accepts 2 integeral values from user and prints there quotient.
 func divideTwoNumbers() {
 	var a, b, c int
 	tabs := utility.Tabs(sublevel1)
@@ -99,7 +99,7 @@ func divideTwoNumbers() {
 	fmt.Printf(tabs+"Division of %d and %d is %d", a, b, c)
 }
 
-//remainderTwoNumbers This package scoped function accepts 2 integeral values from user and prints there remainder
+//remainderTwoNumbers accepts 2 integeral values from user and prints there remainder.
 func remainderTwoNumbers() {
 	var a, b, c int
 	tabs := utility.Tabs(sublevel1)
@@ -111,7 +111,7 @@ func remainderTwoNumbers() {
 	fmt.Printf(tabs+"Remainder of %d and %d is %d", a, b, c)
 }
 
-//reverseOfANumber This package scoped function accepts 1 integeral value from user and prints its reverse
+//reverseOfANumber accepts 1 integeral value from user and prints its reverse.
 func reverseOfANumber() {
 	var orginalNumber, number, reverse, remainder int = 0, 0, 0, 0
 	tabs := utility.Tabs(sublevel1)
@@ -127,7 +127,7 @@ func reverseOfANumber() {
 	fmt.Printf(tabs+"Is Palindrome : %t\n", orginalNumber == number)
 }
 
-//Addition  This function calculates sum of array of values
+//Addition  calculates sum of array of values.
 func Addition(a ...int) int {
 	utility.Println(sublevel1, a)
 	utility.Println(sublevel1)
