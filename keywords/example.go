@@ -4,6 +4,7 @@ These words are therefore not allowed to use as an identifier. Doing this will r
 */
 // Go program to illustrate the
 // use of keywords
+//Package keywords demonstrats usage of some keywords.
 package keywords
 
 import "github.com/programmer-richa/golang_basics/utility"
@@ -11,7 +12,7 @@ import "github.com/programmer-richa/golang_basics/utility"
 // Module Level Flag -- used for indentation Purpose
 const level = 1
 
-//Usage : package, import, func, var are keywords
+//Usage implements package, import, func, var are keywords.
 func Usage() {
 	utility.Printh(level, "Using Keywords")
 	// Here, a is a valid identifier
