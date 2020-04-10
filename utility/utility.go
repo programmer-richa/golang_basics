@@ -1,3 +1,4 @@
+// Package utility   contains common functions used in this module.
 package utility
 
 import (
@@ -5,7 +6,8 @@ import (
 	"strings"
 )
 
-//Tabs   This function generates '\t' strings as per user requirement. It accepts argument: level:Specifies Number of tab keys to ge generated
+//Tabs   generates '\t' strings as per user requirement.
+// It accepts one argument: 1. level that specifies number of tab keys to ge generated.
 func Tabs(level int) string {
 	if level < 1 {
 		level = 0
@@ -15,7 +17,10 @@ func Tabs(level int) string {
 	return tabSpaces
 }
 
-//Printh   This function prints heading in a standardized format. It accepts arguments : level:Specifies Number of tab keys to ge generated and a: Holds Variadic arguments to be printed
+//Printh   prints heading in a standardized format.
+// It accepts two arguments :
+// 1. level that specifies number of tab keys to ge generated
+// 2. a that holds variadic arguments to be printed
 func Printh(level int, a ...interface{}) {
 	tabSpaces := Tabs(level)
 	arguments := tabSpaces + "\n" + tabSpaces
@@ -29,7 +34,10 @@ func Printh(level int, a ...interface{}) {
 
 }
 
-//Println   This function prints data in a standardized format and generates a newline after printing. It accepts arguments : level:Specifies Number of tab keys to ge generated and a: Holds Variadic arguments to be printed
+//Println   prints data in a standardized format and generates a newline after printing.
+// It accepts two arguments :
+// 1. level that specifies number of tab keys to ge generated
+// 2. a that holds variadic arguments to be printed
 func Println(level int, a ...interface{}) {
 
 	arguments := Tabs(level)
@@ -41,7 +49,10 @@ func Println(level int, a ...interface{}) {
 	fmt.Println(arguments)
 }
 
-//Print   This function prints data in a standardized format without generating a newline after command execution. It accepts arguments : level:Specifies Number of tab keys to ge generated and a: Holds Variadic arguments to be printed
+//Print   prints data in a standardized format and does not generate a newline after printing.
+// It accepts two arguments :
+// 1. level that specifies number of tab keys to ge generated
+// 2. a that holds variadic arguments to be printed
 func Print(level int, a ...interface{}) {
 
 	arguments := Tabs(level)
