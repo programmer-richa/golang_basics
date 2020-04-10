@@ -1,3 +1,4 @@
+// Package controlflowstatements implements various control flow structures available in go lang.
 package controlflowstatements
 
 import (
@@ -6,11 +7,11 @@ import (
 	"github.com/programmer-richa/golang_basics/utility"
 )
 
-// Module Level Flag -- used for indentation Purpose
+// Module Level Flag is used for indentation purpose.
 const level = 1
 const sublevel = level + 1
 
-//Control Flow Statements Modules Listing Constants
+// Control Flow Statements Modules Listing Constants.
 const (
 	_ = iota
 	comparisionConst
@@ -53,7 +54,8 @@ const (
 	exitConstLbl        = "Exit"
 )
 
-//Block This function enables user to choose from the list of options available to test variety of control flow statements implemented in this sub module
+//Block   enables user to choose from the list of options available to test variety of control flow statements implemented
+// in this sub module
 func Block() {
 	var choice int
 	//Module Level Option Display
@@ -130,7 +132,7 @@ func Block() {
 
 }
 
-// Comparision  This function uses if-else if - else ladder to compare 2 int variables
+// Comparision   uses if-else if - else ladder to compare 2 int variables.
 func Comparision() {
 	utility.Printh(sublevel, comparisionConstLbl)
 	a, b := 10, 20 // This is recommended way of declaring local variables
@@ -143,7 +145,8 @@ func Comparision() {
 	}
 }
 
-// Options  This function demonstrates the working of switch block that contains the optional statement that inititializes the choice variable for example "day" and expression to test the truthiness for case evaluation
+// Options  demonstrates the working of switch block that contains the optional statement
+// that inititializes the choice variable for example "day" and expression to test the truthiness for case evaluation.
 func Options() {
 	// Switch statement with both
 	// optional statement, i.e, day:=4
@@ -169,7 +172,9 @@ func Options() {
 	}
 }
 
-// Fallthrough  This function demonstrates the working of switch block that specifies fallthrough statements, and contains  the optional statement that inititializes the choice variable for example "day" and expression to test the truthiness for case evaluation
+// Fallthrough   demonstrates the working of switch block that specifies fallthrough statements,
+// and contains  the optional statement that inititializes the choice variable for example "day"
+// and expression to test the truthiness for case evaluation.
 func Fallthrough() {
 	utility.Printh(sublevel, fallthroughConstLbl)
 	// Switch statement with both
@@ -196,7 +201,8 @@ func Fallthrough() {
 	}
 }
 
-// NoOptions This function demonstrates the working of switch block that does not contain  the optional statement that inititializes the choice variable  and expression to test the truthiness for case evaluation
+// NoOptions  demonstrates the working of switch block that does not contain  the optional statement
+// that inititializes the choice variable  and expression to test the truthiness for case evaluation.
 func NoOptions() {
 	utility.Printh(sublevel, noOptionConstLbl)
 	var value int = 2
@@ -216,7 +222,8 @@ func NoOptions() {
 	}
 }
 
-// DefaultChoice  This function demonstrates the default choice "True" of switch block that does not contain  the optional statement that inititializes the choice variable  and expression to test the truthiness for case evaluation
+// DefaultChoice   demonstrates the default choice "True" of switch block that does not contain  the optional statement
+// that inititializes the choice variable  and expression to test the truthiness for case evaluation.
 func DefaultChoice() {
 	utility.Printh(sublevel, defaultConstLbl)
 	switch {
@@ -229,7 +236,7 @@ func DefaultChoice() {
 	}
 }
 
-// Expression  This function demonstrates the abitity of case statement to accept multiple expressions
+// Expression  demonstrates the abitity of case statement to accept multiple expressions.
 func Expression() {
 	utility.Printh(sublevel, expressionConstLbl)
 	var value string = "three"
@@ -246,7 +253,7 @@ func Expression() {
 	}
 }
 
-// Type  This function demonstrates the abitity of switch statement to execute according to the data type of the optional statement variable
+// Type  demonstrates the abitity of switch statement to execute according to the data type of the optional statement variable.
 func Type() {
 	tabs := utility.Tabs(level + 1)
 	utility.Printh(sublevel, typeConstLbl)
@@ -264,7 +271,7 @@ func Type() {
 	}
 }
 
-// Loop  This function uses simple for loop to print values from 1 to 10
+// Loop   implements simple for loop to print values from 1 to 10.
 func Loop() {
 	utility.Printh(sublevel, loopConstLbl)
 	for i := 1; i < 11; i++ {
@@ -272,7 +279,7 @@ func Loop() {
 	}
 }
 
-// Break  This function uses break statement to exit for loop when a specific condition is met
+// Break  implements break statement to exit for loop when a specific condition is met.
 func Break() {
 	utility.Printh(sublevel, breakConstLbl)
 	for i := 1; i < 11; i++ {
@@ -283,7 +290,7 @@ func Break() {
 	}
 }
 
-// Continue  This function uses continue statement to skip for loop iteration when a specific condition is met
+// Continue  implements continue statement to skip for loop iteration when a specific condition is met.
 func Continue() {
 	utility.Printh(sublevel, continueConstLbl)
 	for i := 1; i < 11; i++ {
@@ -294,7 +301,8 @@ func Continue() {
 	}
 }
 
-// Lable  This function uses labeled continue statement to skip for loop iteration and continue with the labeled statement when a specific condition is met
+// Lable  implements labeled continue statement to skip for loop iteration
+// and continue with the labeled statement when a specific condition is met.
 func Lable() {
 	utility.Printh(sublevel, lableConstLbl)
 Lable1:
@@ -310,7 +318,7 @@ Lable1:
 	}
 }
 
-// GOto  This function uses goto statement to jump to the specified labeled position
+// GOto  implements goto statement to jump to the specified labeled position.
 func GOto() {
 	tabs := utility.Tabs(level + 1)
 	utility.Printh(sublevel, gOtoConstLbl)
@@ -330,7 +338,7 @@ Lable1:
 	}
 }
 
-// Infinite  This function demonstrated the working of infinite for loop
+// Infinite   demonstrates the working of infinite for loop.
 func Infinite() {
 	utility.Printh(sublevel, infiniteConstLbl)
 	i := 1
@@ -343,7 +351,8 @@ func Infinite() {
 	}
 }
 
-// While  This function demonstrated the working of for loop which contains condition block only and omits initialization and conditional block, i.e. similar to while loop
+// While   demonstrates the working of for loop which contains condition block only
+// and omits initialization and conditional block, i.e. similar to while loop.
 func While() {
 	utility.Printh(sublevel, whileConstLbl)
 	i := 1
@@ -353,7 +362,7 @@ func While() {
 	}
 }
 
-// Range  This function demonstrates how for loop can be used to iterate over range of values in a slice
+// Range   demonstrates how for loop can be used to iterate over range of values in a slice.
 func Range() {
 	utility.Printh(sublevel, rangeConstLbl)
 	// Here rvariable is a array
@@ -367,7 +376,7 @@ func Range() {
 	}
 }
 
-// OnString  This function demonstrates how for loop can be used to iterate over range of character values in a string
+// OnString   demonstrates how for loop can be used to iterate over range of values in a string.
 func OnString() {
 	tabs := utility.Tabs(sublevel)
 	utility.Printh(sublevel, onStringConstLbl)
@@ -377,7 +386,7 @@ func OnString() {
 	}
 }
 
-// Map  This function demonstrates how for loop can be used to iterate over range of values in a map
+// Map   demonstrates how for loop can be used to iterate over range of values in a map.
 func Map() {
 	utility.Printh(sublevel, mapConstLbl)
 	// using maps
@@ -391,7 +400,7 @@ func Map() {
 	}
 }
 
-// Channel  This function demonstrates how for loop can be used to iterate over range of values in a channel
+// Channel   demonstrates how for loop can be used to iterate over range of values in a channel.
 func Channel() {
 	utility.Printh(sublevel, channelConstLbl)
 	// using channel
