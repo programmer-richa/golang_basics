@@ -1,3 +1,5 @@
+//Package arrays   implements examples to demonstrate working of arrays.
+// However it is recommended to use slice instead of array.
 package arrays
 
 import (
@@ -6,7 +8,7 @@ import (
 	"github.com/programmer-richa/golang_basics/utility"
 )
 
-// Module Level Flag -- used for indentation Purpose
+// Module Level Flag is used for indentation Purpose
 const level = 1
 const sublevel = level + 1
 
@@ -14,9 +16,9 @@ const sublevel = level + 1
 const (
 	_ = iota
 	zeroConst
-	oneDimentionalConst
-	initializeConst
-	multidimentionalConst
+	studentMarksConst
+	storeMarksConst
+	classMarksConst
 	autoSizeConst
 	compareConst
 	copyValueConst
@@ -24,29 +26,29 @@ const (
 	loop1DConst
 	loop2DConst
 	exitConst
-	zeroConstLbl             = "One Dimentional Array Example With Zero Values"
-	oneDimentionalConstLbl   = "One Dimentional Array Example"
-	initializeConstLbl       = "Declaring And Initializing one Dimentional Array In One Line Example"
-	multidimentionalConstLbl = "Declaring And Initializing MultiDimentional Array In One Line Example"
-	autoSizeConstLbl         = "One Dimentional Array With Size Determined By Values"
-	compareConstLbl          = "Comparing Arrays"
-	copyValueConstLbl        = "Copy Array By Value"
-	copyReferenceConstLbl    = "Copy Array By Reference"
-	loop1DConstLbl           = "For Each Loop 1D Array"
-	loop2DConstLbl           = "For Each Loop 2D Array"
-	exitConstLbl             = "Exit"
+	zeroConstLbl          = "Zero Values of Array"
+	studentMarksConstLbl  = "1D array to store marks obtained by a student in multiple subjects"
+	storeMarksConstLbl    = "1D array to store marks obtained by a student in multiple subjects at declaration"
+	classMarksConstLbl    = "2D array to store marks of multiple students in diffent subjects"
+	autoSizeConstLbl      = "Array size calculation according to the number of values passed"
+	compareConstLbl       = "Comparing Arrays"
+	copyValueConstLbl     = "Copy Array By Value"
+	copyReferenceConstLbl = "Copy Array By Reference"
+	loop1DConstLbl        = "Prints index value pair of values in 1 D array using range"
+	loop2DConstLbl        = "Prints index value pair of values in 2 D array using range"
+	exitConstLbl          = "Exit"
 )
 
-//Block This function enables user to choose from the list of options available to test variety of array examples implemented in this sub module
+//Block   enables user to choose from the list of options available to test variety of array examples implemented in this sub module.
 func Block() {
 	var choice int
 	//Module Level Option Display
 	for choice != exitConst {
 		utility.Printh(level, "Choose From Options below :")
 		utility.Println(level, zeroConst, zeroConstLbl)
-		utility.Println(level, oneDimentionalConst, oneDimentionalConstLbl)
-		utility.Println(level, initializeConst, initializeConstLbl)
-		utility.Println(level, multidimentionalConst, multidimentionalConstLbl)
+		utility.Println(level, studentMarksConst, studentMarksConstLbl)
+		utility.Println(level, storeMarksConst, storeMarksConstLbl)
+		utility.Println(level, classMarksConst, classMarksConstLbl)
 		utility.Println(level, autoSizeConst, autoSizeConstLbl)
 		utility.Println(level, compareConst, compareConstLbl)
 		utility.Println(level, copyValueConst, copyValueConstLbl)
@@ -63,12 +65,12 @@ func Block() {
 		switch choice {
 		case zeroConst:
 			Zero()
-		case oneDimentionalConst:
-			OneDimentional()
-		case initializeConst:
-			Initialize()
-		case multidimentionalConst:
-			Multidimentional()
+		case studentMarksConst:
+			StudentMarks()
+		case storeMarksConst:
+			StoreMarks()
+		case classMarksConst:
+			ClassMarks()
 		case autoSizeConst:
 			AutoSize()
 		case compareConst:
@@ -91,7 +93,8 @@ func Block() {
 
 }
 
-//Zero  As there is no concept of uninitiatized variables in go, all the array values are assigned zero(default) values according to the data type
+//Zero   values of variables are displayed in it. Since there is no concept of uninitiatized variables in go,
+// all the array values are assigned zero(default) values according to the data type
 func Zero() {
 	utility.Printh(sublevel, zeroConstLbl)
 	const subjectCount int = 5
@@ -103,7 +106,7 @@ func Zero() {
 
 }
 
-//AutoSize Array length calculation according to the number of values passed
+//AutoSize   demonstrates the array length calculation according to the number of values passed.
 func AutoSize() {
 	utility.Printh(sublevel, autoSizeConstLbl)
 	studentMarks := [...]int{10, 20, 30}
@@ -115,7 +118,7 @@ func AutoSize() {
 
 }
 
-//Compare  Comparing if two arrays are equal or not
+//Compare   demonstrates how arrays can be checked for equality
 func Compare() {
 	utility.Printh(sublevel, compareConstLbl)
 	studentMarks := [...]int{10, 20, 30}
@@ -127,7 +130,7 @@ func Compare() {
 
 }
 
-//CopyValue Arrays are value type, so copy of array is created and assigned to new array
+//CopyValue   demonstrates that arrays are of value type, therefore, a copy of array is created and assigned to new array.
 func CopyValue() {
 	utility.Printh(sublevel, copyValueConstLbl)
 	studentMarks := [...]int{10, 20, 30}
@@ -140,7 +143,8 @@ func CopyValue() {
 
 }
 
-//CopyReference Arrays are value type, so address of array assigned to new array so that the changes made in either array are reflected in other
+//CopyReference   demonstrates that arrays are value type, therefore, address of array assigned to new array
+// so that the changes made in either array are reflected in other
 func CopyReference() {
 	utility.Printh(sublevel, copyReferenceConstLbl)
 	studentMarks := [...]int{10, 20, 30}
@@ -153,9 +157,9 @@ func CopyReference() {
 
 }
 
-//OneDimentional  Working of 1D Array
-func OneDimentional() {
-	utility.Printh(sublevel, oneDimentionalConstLbl)
+//StudentMarks   implements 1D array to store marks obtained by a student in multiple subjects.
+func StudentMarks() {
+	utility.Printh(sublevel, storeMarksConstLbl)
 	const subjectCount int = 5
 	var studentMarks [subjectCount]int
 	for i := 0; i < subjectCount; i++ {
@@ -168,9 +172,9 @@ func OneDimentional() {
 
 }
 
-//Initialize  Declaring Multidimentional Array
-func Initialize() {
-	utility.Printh(sublevel, initializeConstLbl)
+//StoreMarks  implements 1D array to store marks obtained by a student in multiple subjects at time of declaration.
+func StoreMarks() {
+	utility.Printh(sublevel, storeMarksConstLbl)
 	const subjectCount int = 5
 	studentMarks := [subjectCount]int{10, 20, 30, 40, 50}
 
@@ -180,9 +184,9 @@ func Initialize() {
 
 }
 
-//Multidimentional  Declaring MultiDimetional Array
-func Multidimentional() {
-	utility.Printh(sublevel, multidimentionalConstLbl)
+//ClassMarks  implements 2D array to store marks of multiple students in diffent subjects.
+func ClassMarks() {
+	utility.Printh(sublevel, classMarksConstLbl)
 	const studentCount int = 2
 	const subjectCount int = 3
 	studentMarks := [studentCount][subjectCount]int{{10, 20, 30},
@@ -198,7 +202,7 @@ func Multidimentional() {
 
 }
 
-//Loop1D Prints key value pair of values in array using range
+//Loop1D   prints index value pair of values in array using range.
 func Loop1D() {
 	utility.Printh(sublevel, loop1DConstLbl)
 	arr := [5]int{1, 2, 3, 4, 5}
@@ -207,9 +211,9 @@ func Loop1D() {
 	}
 }
 
-//Loop2D Prints key value pair of values in array using range
+//Loop2D   prints index value pair of values in 2 D array using range.
 func Loop2D() {
-	utility.Printh(sublevel, loop1DConstLbl)
+	utility.Printh(sublevel, loop2DConstLbl)
 	arr := [5][2]int{{1, 2},
 		{2, 3},
 		{3, 4},
