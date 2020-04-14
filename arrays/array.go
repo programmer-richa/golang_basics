@@ -1,4 +1,4 @@
-//Package arrays   implements examples to demonstrate working of arrays.
+//Package arrays implements examples to demonstrate working of arrays.
 // However it is recommended to use slice instead of array.
 package arrays
 
@@ -39,7 +39,7 @@ const (
 	exitConstLbl          = "Exit"
 )
 
-//Block   enables user to choose from the list of options available to test variety of array examples implemented in this sub module.
+//Block enables user to choose from the list of options available to test variety of array examples implemented in this sub module.
 func Block() {
 	var choice int
 	//Module Level Option Display
@@ -93,7 +93,7 @@ func Block() {
 
 }
 
-//Zero   values of variables are displayed in it. Since there is no concept of uninitiatized variables in go,
+//Zero values of variables are displayed in it. Since there is no concept of uninitiatized variables in go,
 // all the array values are assigned zero(default) values according to the data type
 func Zero() {
 	utility.Printh(sublevel, zeroConstLbl)
@@ -106,7 +106,7 @@ func Zero() {
 
 }
 
-//AutoSize   demonstrates the array length calculation according to the number of values passed.
+//AutoSize demonstrates the array length calculation according to the number of values passed.
 func AutoSize() {
 	utility.Printh(sublevel, autoSizeConstLbl)
 	studentMarks := [...]int{10, 20, 30}
@@ -118,7 +118,7 @@ func AutoSize() {
 
 }
 
-//Compare   demonstrates how arrays can be checked for equality
+//Compare demonstrates how arrays can be checked for equality
 func Compare() {
 	utility.Printh(sublevel, compareConstLbl)
 	studentMarks := [...]int{10, 20, 30}
@@ -130,7 +130,7 @@ func Compare() {
 
 }
 
-//CopyValue   demonstrates that arrays are of value type, therefore, a copy of array is created and assigned to new array.
+//CopyValue demonstrates that arrays are of value type, therefore, a copy of array is created and assigned to new array.
 func CopyValue() {
 	utility.Printh(sublevel, copyValueConstLbl)
 	studentMarks := [...]int{10, 20, 30}
@@ -143,7 +143,7 @@ func CopyValue() {
 
 }
 
-//CopyReference   demonstrates that arrays are value type, therefore, address of array assigned to new array
+//CopyReference demonstrates that arrays are value type, therefore, address of array assigned to new array
 // so that the changes made in either array are reflected in other
 func CopyReference() {
 	utility.Printh(sublevel, copyReferenceConstLbl)
@@ -157,7 +157,7 @@ func CopyReference() {
 
 }
 
-//StudentMarks   implements 1D array to store marks obtained by a student in multiple subjects.
+//StudentMarks implements 1D array to store marks obtained by a student in multiple subjects.
 func StudentMarks() {
 	utility.Printh(sublevel, storeMarksConstLbl)
 	const subjectCount int = 5
@@ -202,7 +202,7 @@ func ClassMarks() {
 
 }
 
-//Loop1D   prints index value pair of values in array using range.
+//Loop1D prints index value pair of values in array using range.
 func Loop1D() {
 	utility.Printh(sublevel, loop1DConstLbl)
 	arr := [5]int{1, 2, 3, 4, 5}
@@ -211,7 +211,7 @@ func Loop1D() {
 	}
 }
 
-//Loop2D   prints index value pair of values in 2 D array using range.
+//Loop2D prints index value pair of values in 2 D array using range.
 func Loop2D() {
 	utility.Printh(sublevel, loop2DConstLbl)
 	arr := [5][2]int{{1, 2},
