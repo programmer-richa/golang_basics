@@ -13,7 +13,7 @@ Numeric Constant (Integer constant, Floating constant, Complex constant)
 String literals
 Boolean Constant
 */
-// Package constants   demonstrates working of global and local scoped constants, typed and untyped constants, and working of iota.
+// Package constants demonstrates working of global and local scoped constants, typed and untyped constants, and working of iota.
 package constants
 
 import "github.com/programmer-richa/golang_basics/utility"
@@ -38,7 +38,7 @@ const level = 1
 // PI value of PI
 const PI = 3.14 //Untyped
 
-//Usage   demonstrates the scope and type of Constants
+//Usage demonstrates the scope and type of Constants
 func Usage() {
 	utility.Printh(level, "Accessing Package and Global Scope Constants")
 	const AUTHOR string = "Richa" //typed
