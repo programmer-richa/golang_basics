@@ -15,11 +15,11 @@ const sublevel = level + 1
 const (
 	_ = iota
 	swapConst
-	arraysumConst
+	slicesumConst
 	sliceConst
 	exitConst
 	swapConstLbl     = "Swapping Two Numbers"
-	arraysumConstLbl = "Add Elements of 2D Array"
+	slicesumConstLbl = "Add Elements of 2D Slice"
 	sliceConstLbl    = "Demonstrates working of slice according to number of students,subjects specified by user"
 	exitConstLbl     = "Exit"
 )
@@ -31,7 +31,7 @@ func Block() {
 	for choice != exitConst {
 		utility.Printh(level, "Choose From Options below :")
 		utility.Println(level, swapConst, swapConstLbl)
-		utility.Println(level, arraysumConst, arraysumConstLbl)
+		utility.Println(level, slicesumConst, slicesumConstLbl)
 		utility.Println(level, sliceConst, sliceConstLbl)
 		utility.Println(level, exitConst, exitConstLbl)
 		utility.Print(level, "Enter Your choice :")
@@ -44,8 +44,8 @@ func Block() {
 		case swapConst:
 			utility.Printh(sublevel, swapConstLbl)
 			swap()
-		case arraysumConst:
-			utility.Printh(sublevel, arraysumConstLbl)
+		case slicesumConst:
+			utility.Printh(sublevel, slicesumConstLbl)
 			a := [][]int{
 				{1, 2, 3},
 				{4, 5},
