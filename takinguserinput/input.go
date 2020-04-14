@@ -1,4 +1,4 @@
-// Package takinguserinput   demonstrates way to take input from user.
+// Package takinguserinput demonstrates way to take input from user.
 package takinguserinput
 
 import (
