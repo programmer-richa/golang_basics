@@ -4,7 +4,7 @@ Every program must start with the package declaration. In Go language, packages 
   The executable programs are those programs that we can run directly from the terminal and Libraries are the package of programs
   that we can reuse them in our program. Here, the package main tells the compiler that the package must compile
   in the executable program rather than a shared library. It is the starting point of the program and also contains
-   the main function in it.
+ the main function in it.
 */
 // Package main Entry Point of the Program
 package main
@@ -20,10 +20,13 @@ import (
 	"github.com/programmer-richa/golang_basics/helloworld"
 	"github.com/programmer-richa/golang_basics/identifiers"
 	"github.com/programmer-richa/golang_basics/keywords"
+	"github.com/programmer-richa/golang_basics/maps"
 	"github.com/programmer-richa/golang_basics/operators"
 	"github.com/programmer-richa/golang_basics/pointers"
 	"github.com/programmer-richa/golang_basics/runtimeexample"
+	"github.com/programmer-richa/golang_basics/slices"
 	"github.com/programmer-richa/golang_basics/strings"
+	"github.com/programmer-richa/golang_basics/structs"
 	"github.com/programmer-richa/golang_basics/takinguserinput"
 	"github.com/programmer-richa/golang_basics/utility"
 	"github.com/programmer-richa/golang_basics/variables"
@@ -32,21 +35,24 @@ import (
 // Package Level Constants For Module Choice
 const (
 	// value of iota is incremented for all constants declared
-	_                  = iota // iota value starts from 0 in every separate const block
-	helloConst                // or helloConst= iota // Automatically helloConst will be assigned current value of iota i.e. 1
-	variableConst      = iota //iota 2
-	identifierConst    = iota
-	keywordsConst      = iota
-	constantsFlowConst = iota
-	controlFlowConst   = iota
-	operatorsConst     = iota
-	arrayConst         = iota
-	pointerConst       = iota
-	userInpuConst      = iota
-	functionConst      = iota
-	runtimeConst       = iota
-	stringConst        = iota
-	exerciseConst      = iota
+	_               = iota // iota value starts from 0 in every separate const block
+	helloConst             // or helloConst= iota // Automatically helloConst will be assigned current value of iota i.e. 1
+	variableConst   = iota //iota 2
+	identifierConst        // 3
+	keywordsConst
+	constantsFlowConst
+	controlFlowConst
+	operatorsConst
+	arrayConst
+	sliceConst
+	mapConst
+	structConst
+	pointerConst
+	userInpuConst
+	functionConst
+	runtimeConst
+	stringConst
+	exerciseConst
 	exitConst
 	helloConstlbl       = "Hello World"
 	variableConstlbl    = "Variable"
@@ -56,6 +62,9 @@ const (
 	controlFlowConstlbl = "Control Flow"
 	operatorsConstlbl   = "Operators"
 	arrayConstlbl       = "Array"
+	sliceConstlbl       = "Slice"
+	mapConstlbl         = "Map"
+	structConstlbl      = "Struct , method and interface"
 	pointerConstlbl     = "Pointer"
 	userInpuConstlbl    = "Taking User Input"
 	functionConstlbl    = "Functions"
@@ -82,6 +91,9 @@ func main() {
 		utility.Println(level, controlFlowConst, controlFlowConstlbl)
 		utility.Println(level, operatorsConst, operatorsConstlbl)
 		utility.Println(level, arrayConst, arrayConstlbl)
+		utility.Println(level, sliceConst, sliceConstlbl)
+		utility.Println(level, mapConst, mapConstlbl)
+		utility.Println(level, structConst, structConstlbl)
 		utility.Println(level, pointerConst, pointerConstlbl)
 		utility.Println(level, userInpuConst, userInpuConstlbl)
 		utility.Println(level, functionConst, functionConstlbl)
@@ -110,6 +122,12 @@ func main() {
 			operators.Block()
 		case arrayConst:
 			arrays.Block()
+		case sliceConst:
+			slices.Block()
+		case mapConst:
+			maps.Block()
+		case structConst:
+			structs.Block()
 		case pointerConst:
 			pointers.Block()
 		case userInpuConst:
