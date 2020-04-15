@@ -17,10 +17,12 @@ const (
 	swapConst
 	slicesumConst
 	sliceConst
+	structConst
 	exitConst
 	swapConstLbl     = "Swapping Two Numbers"
 	slicesumConstLbl = "Add Elements of 2D Slice"
 	sliceConstLbl    = "Demonstrates working of slice according to number of students,subjects specified by user"
+	structConstLbl   = "Passing struct by reference"
 	exitConstLbl     = "Exit"
 )
 
@@ -33,6 +35,7 @@ func Block() {
 		utility.Println(level, swapConst, swapConstLbl)
 		utility.Println(level, slicesumConst, slicesumConstLbl)
 		utility.Println(level, sliceConst, sliceConstLbl)
+		utility.Println(level, structConst, structConstLbl)
 		utility.Println(level, exitConst, exitConstLbl)
 		utility.Print(level, "Enter Your choice :")
 
@@ -43,18 +46,21 @@ func Block() {
 		switch choice {
 		case swapConst:
 			utility.Printh(sublevel, swapConstLbl)
-			swap()
+			Swap()
 		case slicesumConst:
 			utility.Printh(sublevel, slicesumConstLbl)
 			a := [][]int{
 				{1, 2, 3},
 				{4, 5},
 			}
-			sum := add2d(&a)
+			sum := Add2d(&a)
 			utility.Println(sublevel, "Sum = ", sum)
 		case sliceConst:
 			utility.Printh(level, sliceConstLbl)
-			dynamicMarks()
+			DynamicMarks()
+		case structConst:
+			utility.Printh(level, structConstLbl)
+			Struct()
 		case exitConst:
 			utility.Println(level, exitConstLbl)
 		default:

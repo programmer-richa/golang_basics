@@ -1,7 +1,7 @@
 package exercise
 
-//add2d  returns sum of 2d slice.
-func add2d(arr *[][]int) (sum int) {
+// Add2d  returns sum of 2d slice.
+func Add2d(arr *[][]int) (sum int) {
 	rows := len(*(arr))
 	for i := 0; i < rows; i++ {
 		cols := len((*(arr))[i])
