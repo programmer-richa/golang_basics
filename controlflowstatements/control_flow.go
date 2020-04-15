@@ -54,7 +54,7 @@ const (
 	exitConstLbl        = "Exit"
 )
 
-//Block   enables user to choose from the list of options available to test variety of control flow statements implemented
+//Block enables user to choose from the list of options available to test variety of control flow statements implemented
 // in this sub module
 func Block() {
 	var choice int
@@ -132,7 +132,7 @@ func Block() {
 
 }
 
-// Comparision   uses if-else if - else ladder to compare 2 int variables.
+// Comparision uses if-else if - else ladder to compare 2 int variables.
 func Comparision() {
 	utility.Printh(sublevel, comparisionConstLbl)
 	a, b := 10, 20 // This is recommended way of declaring local variables
@@ -172,7 +172,7 @@ func Options() {
 	}
 }
 
-// Fallthrough   demonstrates the working of switch block that specifies fallthrough statements,
+// Fallthrough demonstrates the working of switch block that specifies fallthrough statements,
 // and contains  the optional statement that inititializes the choice variable for example "day"
 // and expression to test the truthiness for case evaluation.
 func Fallthrough() {
@@ -222,7 +222,7 @@ func NoOptions() {
 	}
 }
 
-// DefaultChoice   demonstrates the default choice "True" of switch block that does not contain  the optional statement
+// DefaultChoice demonstrates the default choice "True" of switch block that does not contain  the optional statement
 // that inititializes the choice variable  and expression to test the truthiness for case evaluation.
 func DefaultChoice() {
 	utility.Printh(sublevel, defaultConstLbl)
@@ -271,7 +271,7 @@ func Type() {
 	}
 }
 
-// Loop   implements simple for loop to print values from 1 to 10.
+// Loop implements simple for loop to print values from 1 to 10.
 func Loop() {
 	utility.Printh(sublevel, loopConstLbl)
 	for i := 1; i < 11; i++ {
@@ -338,7 +338,7 @@ Lable1:
 	}
 }
 
-// Infinite   demonstrates the working of infinite for loop.
+// Infinite demonstrates the working of infinite for loop.
 func Infinite() {
 	utility.Printh(sublevel, infiniteConstLbl)
 	i := 1
@@ -351,7 +351,7 @@ func Infinite() {
 	}
 }
 
-// While   demonstrates the working of for loop which contains condition block only
+// While demonstrates the working of for loop which contains condition block only
 // and omits initialization and conditional block, i.e. similar to while loop.
 func While() {
 	utility.Printh(sublevel, whileConstLbl)
@@ -362,7 +362,7 @@ func While() {
 	}
 }
 
-// Range   demonstrates how for loop can be used to iterate over range of values in a slice.
+// Range demonstrates how for loop can be used to iterate over range of values in a slice.
 func Range() {
 	utility.Printh(sublevel, rangeConstLbl)
 	// Here rvariable is a array
@@ -376,7 +376,7 @@ func Range() {
 	}
 }
 
-// OnString   demonstrates how for loop can be used to iterate over range of values in a string.
+// OnString demonstrates how for loop can be used to iterate over range of values in a string.
 func OnString() {
 	tabs := utility.Tabs(sublevel)
 	utility.Printh(sublevel, onStringConstLbl)
@@ -386,7 +386,7 @@ func OnString() {
 	}
 }
 
-// Map   demonstrates how for loop can be used to iterate over range of values in a map.
+// Map demonstrates how for loop can be used to iterate over range of values in a map.
 func Map() {
 	utility.Printh(sublevel, mapConstLbl)
 	// using maps
@@ -400,7 +400,7 @@ func Map() {
 	}
 }
 
-// Channel   demonstrates how for loop can be used to iterate over range of values in a channel.
+// Channel demonstrates how for loop can be used to iterate over range of values in a channel.
 func Channel() {
 	utility.Printh(sublevel, channelConstLbl)
 	// using channel
